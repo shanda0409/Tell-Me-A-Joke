@@ -1,0 +1,92 @@
+body {
+  /*text-align: center;*/
+  background-size: cover;
+  color: black;
+  font-family: 'Amatic SC', cursive;
+  background-color: rgb(207, 94, 94);
+}
+#joke-box {
+  position: absolute;
+  top: 14%;
+  left: 10%;
+  right: 10%;
+  width: 80%;
+  line-height: .5;
+}
+.joke {
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.1;
+  text-shadow: 0 1px 1px rgba(0,0,0, .8);
+  position: relative;
+  margin: 0;
+  } 
+.joke:before, .joke:after {
+  font-size: 6rem;
+  line-height: 2.5rem;
+  position: absolute;
+}
+.joke:before {
+  content: "“";
+  top: .25em;
+  left: -.5em;
+}
+.joke:after {
+  content: "”";
+  bottom: -.1em;
+  margin-left: .1em;
+  position: absolute;
+}
+.reaction {
+  font-size: 2.5rem;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  text-align: right;
+  margin-right: 4em;
+}
+.reaction:before {
+  content: "—>";
+}
+
+#loadJoke {
+  font-size: 4rem;
+  position: fixed;
+  width: 7em;
+  display: inline-block;
+  left: 38%;
+  margin-left: -6em;
+  bottom: 150px;
+  border-radius: 4px;
+  border: 2px solid #000;
+  color: #000;
+  background-color: rgba(255,255,255, 0);
+  padding: 15px 0;
+  transition: .5s ;
+  font-family: 'Qwitcher Grypen', cursive;
+  font-weight: 700;
+}
+#loadJoke:hover {
+  background-color: rgba(255,255,255,.25);
+  cursor: pointer;
+  font-size: 4.1rem;
+}
+#loadJoke:focus {
+  outline: none;
+}
+
+@media (max-width: 420px) {
+  .joke {
+    font-size: 2.5rem;
+  }
+  .joke:before, .joke:after {
+    font-size: 3rem;
+  }
+  .reaction {
+    font-size: 1rem;
+  }
+  #loadJoke{
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1.5rem;
+  }
+}
